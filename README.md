@@ -9,20 +9,20 @@ El servicio sólo acepta las letras N y U como parámetros válidos, de lo contr
 
 Las URLs publicadas son las siguientes:
 
-<Servidor>:<Puerto>/products => Obtiene todos los Productos ordenados por Tipo de Condición.
+"Servidor":"Puerto"/products => Obtiene todos los Productos ordenados por Tipo de Condición.
 
-<Servidor>:<Puerto>/products/ => Obtiene todos los Productos ordenados por Tipo de Condición.
+"Servidor":"Puerto"/products/ => Obtiene todos los Productos ordenados por Tipo de Condición.
 
-<Servidor>:<Puerto>/products/N => Obtiene los Productos con Tipo de Condición Nuevo.
+"Servidor":"Puerto"/products/N => Obtiene los Productos con Tipo de Condición Nuevo.
 
-<Servidor>:<Puerto>/products/U => Obtiene los Productos con Tipo de Condición Usado.
+"Servidor":"Puerto"/products/U => Obtiene los Productos con Tipo de Condición Usado.
 
-<Servidor>:<Puerto>/products/getByItemCondition => Obtiene todos los Productos ordenados por Tipo de Condición.
+"Servidor":"Puerto"/products/getByItemCondition => Obtiene todos los Productos ordenados por Tipo de Condición.
 
-<Servidor>:<Puerto>/products/getByItemCondition/ => Obtiene todos los Productos ordenados por Tipo de Condición.
+"Servidor":"Puerto"/products/getByItemCondition/ => Obtiene todos los Productos ordenados por Tipo de Condición.
 
-<Servidor>:<Puerto>/products/getByItemCondition/N => Obtiene los Productos con Tipo de Condición Nuevo.
+"Servidor":"Puerto"/products/getByItemCondition/N => Obtiene los Productos con Tipo de Condición Nuevo.
 
-<Servidor>:<Puerto>/products/getByItemCondition/U => Obtiene los Productos con Tipo de Condición Usado.
+"Servidor":"Puerto"/products/getByItemCondition/U => Obtiene los Productos con Tipo de Condición Usado.
 
-<Servidor>:<Puerto>/products/getByItemCondition/<Parámetro Distinto a N o U> => Lanza Mensaje de Error de Parámetro Inválido.
+"Servidor":"Puerto"/products/getByItemCondition/"Parámetro Distinto a N o U" => Lanza Mensaje de Error de Parámetro Inválido.
