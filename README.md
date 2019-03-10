@@ -1,9 +1,11 @@
 # spring-boot-productos
 Repositorio correspondientes al API REST para Obtener Productos
 
-Proyecto que publica un API de Servicios REST que lee un listado de Productos, filtrado los mismos por Tipo de Item (ITEM_CONDITION),
-N para Nuevo o U para Usado, generando una lista por Tipo de Condición, si no se especifica el mismo, se obtiene todos los productos 
-ordenados por Tipo de Condición.
+Proyecto que publica un API de Servicios REST que lee un listado de Productos proveniente de un servicio implementado previamente, filtrado los mismos por el Atributo Tipo de Item (ITEM_CONDITION) de cada Producto obtenido.
+
+Este valor de negocio tiene dos Valores, Nuevo o Usado.
+
+El API desarrollado filtra el listado obtenido por el Atributo ITEM_CONDITION generando un listado final por Tipo de Condición de acuerdo a un parámetro pasado por la URL publicada del API, en caso de que no se especifique el mismo, se obtienen todos los productos ordenados por Tipo de Condición.
 
 El servicio sólo acepta las letras N y U como parámetros válidos, de lo contrario, lanzará un mensaje de error de parámetro no válido.
 
