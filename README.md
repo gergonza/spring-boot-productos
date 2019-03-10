@@ -28,3 +28,9 @@ Las URLs publicadas son las siguientes:
 "Servidor":"Puerto"/products/getByItemCondition/U => Obtiene los Productos con Tipo de Condición Usado.
 
 "Servidor":"Puerto"/products/getByItemCondition/"Parámetro Distinto a N o U" => Lanza Mensaje de Error de Parámetro Inválido.
+
+Este servicio se ejecuta sobre Protocolo HTTP.
+
+Dirección IP de Prueba: 34.73.176.5
+
+Puerto: 8080
