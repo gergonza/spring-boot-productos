@@ -34,3 +34,11 @@ Este servicio se ejecuta sobre Protocolo HTTP.
 Dirección IP de Prueba: 34.73.176.5
 
 Puerto: 8080
+
+Este servicio requiere autorización bajo los siguientes datos:
+
+1) Primera Opción: Usuario: admin, Clave: password
+
+2) Especificando el Header "Authorization" el siguiente dato: Basic YWRtaW46cGFzc3dvcmQ=
+
+
