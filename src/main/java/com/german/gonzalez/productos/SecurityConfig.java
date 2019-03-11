@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * Componente para Establecer un Entorno de Seguridad sobre el Sistema
- * La Anotacion @Configuration indica que el Componente forma parte de la Configuración del Sistema
+ * La Anotacion @Configuration indica que el Componente forma parte de la Configuracion del Sistema
  * @author German Gonzalez
  * @since 11-03-2019
  * @version 1.0.0
@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     	auth.inMemoryAuthentication()
             .withUser("admin")
             .password("{noop}password")
-            .roles("USER");
+            .roles("USER","ADMIN");
     	
     }
 
