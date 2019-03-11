@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.Before;
@@ -21,8 +20,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.german.gonzalez.model.entrada.AtributoEntrada;
 import com.german.gonzalez.model.entrada.Dato;
@@ -58,7 +55,18 @@ public class ProductosControllerUnitTest {
     @Autowired
     private ProductosController productosController;
     
-    private <T> T mapFromJson(String json, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {
+    /**
+     * Metodo que realiza el Mapeo de un JSON a un Objeto (Serializar JSON a Objeto)
+     * @author German Gonzalez
+     * @since 10-03-2019
+     * @version 1.0.0
+     * @param json Objeto String que representa el JSON a Serializar
+     * @param clazz Objeto Class<T> Generico que representa la Clase Java el cual sera destino de la Serializacion del JSON
+     * @return T Objeto Generico <T> correspondiente a la Clase Destino de la Serializacion
+     * @throws Exception
+     *
+     */
+    private <T> T mapFromJson(String json, Class<T> clazz) throws Exception {
     	      
     	ObjectMapper objectMapper = new ObjectMapper();
     	      
@@ -214,7 +222,7 @@ public class ProductosControllerUnitTest {
         productos.getResults().add(producto2);
 
     }
-
+    
     /**
      * Metodo que ejecutara la prueba unitaria correspondiente a la invocacion de la URL "/products" (Todos los Productos)
      * @author German Gonzalez
