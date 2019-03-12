@@ -56,6 +56,19 @@ public class ProductosControllerIntegrationTest {
     public void setup() throws Exception {
         this.mvc = standaloneSetup(this.productosController).setControllerAdvice(new ExceptionHandlingControllerAdvice()).build();
     }
+    
+    /**
+     * Metodo que ejecutara la prueba de integracion correspondiente al Inicio del Sistema
+     * @author German Gonzalez
+     * @since 10-03-2019
+     * @version 1.0.0
+     * @throws Exception
+     *
+     */
+    @Test
+    public void main() {   
+    	Application.main(new String[] {});
+    }
 
     /**
      * Metodo que ejecutara la prueba de integracion correspondiente a la invocacion de la URL "/products" (Todos los Productos)
@@ -196,7 +209,7 @@ public class ProductosControllerIntegrationTest {
     	
     	mvc.perform(MockMvcRequestBuilders.get("/products/getByItemCondition/A"))
 			.andExpect(MockMvcResultMatchers.status().is5xxServerError())
-			.andExpect(jsonPath("$.reason").value("Ha Ocurrido un Error al Procesar la Peticion: java.lang.Exception: Debe Ingresar N para Nuevo o U para Usado"));
+			.andExpect(jsonPath("$.message").value("Ha Ocurrido un Error al Procesar la Peticion: java.lang.Exception: Debe Ingresar N para Nuevo o U para Usado"));
     	
     }
     

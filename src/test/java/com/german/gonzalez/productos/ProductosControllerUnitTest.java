@@ -418,7 +418,7 @@ public class ProductosControllerUnitTest {
     	
     	mvc.perform(MockMvcRequestBuilders.get("/products/getByItemCondition/A"))
 			.andExpect(MockMvcResultMatchers.status().is5xxServerError())
-			.andExpect(jsonPath("$.reason").value("Ha Ocurrido un Error al Procesar la Peticion: java.lang.Exception: Debe Ingresar N para Nuevo o U para Usado"));
+			.andExpect(jsonPath("$.message").value("Ha Ocurrido un Error al Procesar la Peticion: java.lang.Exception: Debe Ingresar N para Nuevo o U para Usado"));
     	
     }
     

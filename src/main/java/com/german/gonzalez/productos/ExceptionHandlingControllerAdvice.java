@@ -44,9 +44,11 @@ public class ExceptionHandlingControllerAdvice {
 	 *
 	 */
 	private static String createJson(String message, String reason) {
-		return "{\"error\" : \"" + message + "\"," +
-			   "\"date\" : \"" + new Date()  + "\"," +
-			   "\"reason\" : \"" + reason  + "\"}";
+		return "{\"timestamp\": \"" + new Date() + "\"," +
+			   "\"status\": \"" + HttpStatus.INTERNAL_SERVER_ERROR  + "\"," +
+			   "\"error\": \"" + message  + "\"," +
+			   "\"message\": \"" + reason  + "\"," +
+			   "\"path\": \"\"}";
 	}
 
 	/**
