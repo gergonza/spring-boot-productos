@@ -35,6 +35,8 @@ Dirección IP de Prueba: 34.73.176.5
 
 Puerto: 8080
 
+La sesión se mantendrá hasta que se cierre el navegador o limpie el historial.
+
 Este servicio requiere autorización bajo los siguientes datos:
 
 1) Primera Opción: Usuario: admin, Clave: password
