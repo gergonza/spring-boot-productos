@@ -6,7 +6,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.AuthenticationEntryPoint;
 
 /**
  * Componente para Establecer un Entorno de Seguridad sobre el Sistema
@@ -21,9 +20,6 @@ import org.springframework.security.web.AuthenticationEntryPoint;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private AuthenticationEntryPoint authEntryPoint;
-	
 	/**
 	 * Metodo para Configurar el Tipo de Autenticacion a utilizar para el Sistema (se establece HTTP Basico)
 	 * La Anotacion @Override indica que es un metodo sobreescrito de la clase de la cual hereda el componente
@@ -40,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
          	.csrf().disable()
          	.authorizeRequests().anyRequest().authenticated()
          	.and()
-         	.httpBasic().realmName("Sistema de Productos").authenticationEntryPoint(authEntryPoint);
+         	.httpBasic();
     
 	}
 
