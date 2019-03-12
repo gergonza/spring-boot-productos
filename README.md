@@ -7,7 +7,7 @@ Este valor de negocio tiene dos Valores, Nuevo o Usado.
 
 El API desarrollado filtra el listado obtenido por el Atributo ITEM_CONDITION generando un listado final por Tipo de Condición de acuerdo a un parámetro pasado por la URL publicada del API, en caso de que no se especifique el mismo, se obtienen todos los productos ordenados por Tipo de Condición.
 
-El servicio sólo acepta las letras N y U como parámetros válidos, de lo contrario, lanzará un mensaje de error de parámetro no válido.
+El servicio sólo acepta las letras N y U (en Mayúsculas) como parámetros válidos, de lo contrario, lanzará un mensaje de error de parámetro no válido. El API es sensible a minúsculas y mayúsculas, por lo cual las letras "n" y "u" no se consideran válidas.
 
 Las URLs publicadas son las siguientes:
 
